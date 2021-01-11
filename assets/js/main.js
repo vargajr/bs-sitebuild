@@ -21,3 +21,22 @@ document.addEventListener('scroll', debounce(storeScroll), { passive: true });
   
 // Update scroll position for first time
 storeScroll();
+
+const scrollToDownload = function() {
+    document.querySelector('#download').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+}
+
+const scrollToFeature = function() {
+    document.querySelector('#feature').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+}
+
+const scrollToContact = function() {
+    document.querySelector('#contact').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+}
+
+const download = document.querySelector('#toDownload');
+const feature = document.querySelector('#toFeatures');
+const contact = document.querySelector('#toContact');
+download.addEventListener("click", scrollToDownload);
+feature.addEventListener("click", scrollToFeature);
+contact.addEventListener("click", scrollToContact);
