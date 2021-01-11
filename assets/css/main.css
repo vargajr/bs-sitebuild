@@ -1,0 +1,151 @@
+.header {
+    background-image: url("/assets/img/bg-pattern.png"), linear-gradient(to right, rgb(218,36,49), rgba(122,67,151));
+    background-repeat: repeat, no-repeat;
+}
+
+.header-button{
+    transition: all .3s;
+}
+
+.header-button:hover{
+    background-color: #fdcc52;
+    border-color: #fdcc52;
+}
+
+.header-image {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header-image--frame {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header-image--screen {
+    position: absolute;
+    top: 12%;
+    left: 7%;
+    width: 86%;
+}
+
+.main-icon--transparent {
+    background-image: linear-gradient(to right, rgb(218, 36, 49) , rgb(122, 67, 151));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/* There is no CSS property background-opacity, but you can fake it by inserting
+a pseudo element with regular opacity the exact size of the element behind it.  */
+
+.blurredBackground_wrap {
+    position: relative;
+    overflow: hidden;
+}
+.blurredBackground_content {
+    position: relative;
+    z-index: 2;
+}
+
+.blurredBackground_wrap:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+    background-image: url('/assets/img/bg-cta.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.heart{
+    color: rgb(255, 0, 0);
+}
+
+.iconplate {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+}
+
+.iconplate__twitter {
+    background-color: rgba(0, 160, 241, 0.9);
+}
+.iconplate__facebook {
+    background-color: rgba(57, 90, 151, 0.9);
+}
+.iconplate__gplus {
+    background-color: rgba(229, 77, 60, 0.9);
+}
+
+.iconplate__twitter:hover {
+    background-color: rgb(0, 160, 241);
+}
+.iconplate__facebook:hover {
+    background-color: rgb(57, 90, 151);
+}
+.iconplate__gplus:hover {
+    background-color: rgb(229, 77, 60);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Catamaran", Helvetica, Arial, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+button, .navbar {
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&family=Ovo&display=swap');
+p, footer {
+    font-family: 'Mulish', Helvetica, Arial, sans-serif;
+}
+
+/* Header background color change: https://css-tricks.com/styling-based-on-scroll-position/ */
+.stickyHeader{
+    background-color: #fff;
+    padding: 0;
+}
+
+.stickyHeader a:hover {
+    color: #999 !important;
+}
+
+/* .stickyHeader:not([data-scroll='0']) a:hover {
+    color: #999 !important;
+} */
+
+@media screen and (min-width: 992px) {
+    .stickyHeader{
+        background-color: transparent;
+        padding: 0 8em;
+    }
+    .stickyHeader a:hover {
+        color: #fff !important;
+    }
+    .stickyHeader:not([data-scroll='0']) {
+        background-color: #fff;
+    }
+    .stickyHeader:not([data-scroll='0']) a {
+        color: #999 !important;
+    }
+    .stickyHeader:not([data-scroll='0']) a:hover {
+        color: #fdcc52 !important;
+    }
+}
