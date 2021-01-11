@@ -93,13 +93,13 @@ a pseudo element with regular opacity the exact size of the element behind it.  
 }
 
 .iconplate__twitter:hover {
-    background-color: rgb(0, 160, 241);
+    background-color: rgba(0, 160, 241, 0);
 }
 .iconplate__facebook:hover {
-    background-color: rgb(57, 90, 151);
+    background-color: rgba(57, 90, 151, 0);
 }
 .iconplate__gplus:hover {
-    background-color: rgb(229, 77, 60);
+    background-color: rgba(229, 77, 60, 0);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&display=swap');
@@ -148,4 +148,8 @@ p, footer {
     .stickyHeader:not([data-scroll='0']) a:hover {
         color: #fdcc52 !important;
     }
+}
+
+footer a:hover {
+    color: #fdcc52 !important;
 }
